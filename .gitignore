@@ -1,0 +1,30 @@
+# General
+.DS_Store
+.vscode/
+*.log
+
+# Python / Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/routinetracker.db
+*.db
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+node_modules/
+dist/
+.env
+
+# Large files
+*.mp4
+*.mov
+*.avi
+*.zip
+*.tar.gz

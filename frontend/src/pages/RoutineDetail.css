@@ -1,0 +1,416 @@
+.routine-detail-container {
+    padding: 2rem;
+    color: white;
+    min-height: 100vh;
+    background-color: #0f172a;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+    color: white;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.detail-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.routine-type-badge {
+    background: rgba(99, 102, 241, 0.2);
+    color: #818cf8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+.description {
+    color: #94a3b8;
+    margin-top: 0.5rem;
+}
+
+.edit-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.edit-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #34d399;
+}
+
+.stat-value.small {
+    font-size: 1.5rem;
+}
+
+.stat-unit {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: normal;
+}
+
+.badges-section {
+    margin-bottom: 2rem;
+}
+
+.badges-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.badge-large {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.no-badges {
+    color: #64748b;
+    font-style: italic;
+}
+
+.graph-section {
+    background: rgba(30, 41, 59, 0.3);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.github-graph-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: #0d1117;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    overflow-x: auto;
+}
+
+.graph-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.month-labels {
+    position: relative;
+    height: 15px;
+    margin-left: 30px;
+    /* Offset for day labels */
+}
+
+.month-labels span {
+    position: absolute;
+    font-size: 12px;
+    color: #7d8590;
+}
+
+.graph-body {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.day-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+    /* Align with rows roughly */
+    padding-bottom: 15px;
+    height: 86px;
+    /* 7 rows * 12px + gaps */
+    font-size: 12px;
+    color: #7d8590;
+    margin-right: 0.5rem;
+}
+
+.day-labels span {
+    height: 12px;
+    line-height: 12px;
+}
+
+/* Hide every other label to match GitHub style roughly or just show specific ones */
+.day-labels span:nth-child(odd) {
+    visibility: visible;
+}
+
+.graph-grid {
+    display: grid;
+    grid-template-rows: repeat(7, 10px);
+    grid-auto-flow: column;
+    gap: 3px;
+}
+
+.graph-day {
+    width: 10px;
+    height: 10px;
+    background-color: #161b22;
+    border-radius: 2px;
+    border: 1px solid rgba(27, 31, 35, 0.06);
+}
+
+.graph-day.empty {
+    background-color: transparent;
+    border: none;
+}
+
+.graph-day.completed {
+    background-color: #39d353;
+    /* GitHub green */
+    border: 1px solid rgba(27, 31, 35, 0.06);
+}
+
+.graph-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    color: #7d8590;
+    margin-left: 30px;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.year-selector-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.year-selector-vertical button {
+    background: transparent;
+    border: none;
+    color: #7d8590;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+}
+
+.year-selector-vertical button:hover {
+    background: rgba(177, 186, 196, 0.12);
+}
+
+.year-selector-vertical button.active {
+    background: #1f6feb;
+    color: white;
+}
+
+/* Badges & Milestones */
+.next-milestone {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progress-bar {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #60a5fa, #34d399);
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.badge-item.unlocked {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.badge-item.locked {
+    background: rgba(30, 41, 59, 0.5);
+    color: #64748b;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.badge-icon {
+    font-size: 1.1rem;
+}
+
+/* Daily Tasks Section */
+.tasks-section {
+    margin-bottom: 2rem;
+    background: rgba(30, 41, 59, 0.3);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.daily-tasks-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.daily-task-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.daily-task-item:hover {
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateX(4px);
+}
+
+.daily-task-item.completed {
+    background: rgba(52, 211, 153, 0.1);
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #94a3b8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34d399;
+    font-weight: bold;
+}
+
+.daily-task-item.completed .task-checkbox {
+    border-color: #34d399;
+    background: rgba(52, 211, 153, 0.2);
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-time {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.task-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.daily-task-item.completed .task-name {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* Graph Selected State */
+.graph-day.selected {
+    border: 2px solid #60a5fa;
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.task-edit-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.remove-task-btn {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: none;
+    width: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-task-btn:hover {
+    background: rgba(239, 68, 68, 0.4);
+}

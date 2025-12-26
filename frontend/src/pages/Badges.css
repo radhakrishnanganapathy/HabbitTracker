@@ -1,0 +1,81 @@
+.badges-page-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #f8fafc;
+}
+
+.badges-page-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #60a5fa, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.badges-subtitle {
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.badges-grid-large {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.badge-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.badge-card.unlocked {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(245, 158, 11, 0.3);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.badge-card.unlocked:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.badge-card.locked {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+.badge-icon-large {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.badge-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+}
+
+.badge-count {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.badge-locked-text {
+    color: #64748b;
+    font-style: italic;
+}
